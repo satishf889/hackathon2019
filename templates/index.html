@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Display Webcam Stream</title>
+ 
+<style>
+#container {
+	margin: 0px auto;
+	width: 900px;
+	height: 475px;
+	border: 20px #333 solid;
+}
+h1 {color:red;}
+
+#videoElement {
+	width: 900px;
+	height: 475px;
+	background-color: #666;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {font-size: 24px;}
+.button2 {font-size: 24px; background-color: #f44336;}
+
+</style>
+</head>
+ 
+<body>
+<h1 align="center">TEAM - MAGIK <img src="/static/angel.jpg" width="150" height="150"alt="MAGIK hack" align="middle"></h1>
+
+<div id="container">
+	<img id="videoElement" src="{{ url_for('video_feed') }}">
+</div>
+<form>
+<button class="button button1" onclick="window.location.href = 'localhost:5000/start'">Start!!</button>
+<button class="button button2" style="float:right" onclick="window.location.href = 'localhost:5000/">Stop!!</button>
+</form>
+
+</body>
+</html>
