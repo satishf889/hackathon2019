@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Display Webcam Stream</title>
+ 
+<style>
+#container {
+	margin: 0px auto;
+	width: 900px;
+	height: 475px;
+	border: 20px #333 solid;
+}
+h1 {color:red;}
+
+#videoElement {
+	width: 900px;
+	height: 475px;
+	background-color: #666;
+}
+.form {
+		margin: 0 auto;
+		width: 210px;
+		
+		
+		
+	}
+	
+
+
+</style>
+</head>
+ 
+<body>
+<h1 align="center">TEAM - MAGIK <img src="/static/angel.jpg" width="150" height="150"alt="MAGIK hack" align="middle"></h1>
+
+<div id="container">
+	<video  id="videoElement" controls>
+			<source src="/static/video1.mp4" >
+	</video>
+</div>
+<p id="demo" style="color:red" >{{data}}</p>
+
+<audio src="" class="speech" hidden></audio>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+var vid = document.getElementById("videoElement");
+vid.pause = function() {
+ //var obj = window.open('file:///C:/Users/win7/Desktop/YOLO/darkflow-master/hack.json')
+});
+//var myJSON = JSON.stringify(obj);
+//console.log(myJSON)
+document.getElementById("demo").innerHTML = '';
+};
+</script>
+</body> 
+</html>
